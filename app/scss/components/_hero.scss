@@ -9,7 +9,7 @@
   grid-template-rows: 350px 257px;
   grid-column-gap: 30px;
   grid-row-gap: 30px;
-  }
+}
 
 .div1 {
   grid-area: 1 / 1 / 3 / 2;
@@ -17,12 +17,13 @@
 
 .div2 {
   grid-area: 1 / 2 / 2 / 4;
+
   & div {
     font-family: 'TTFirsNeue', sans-serif;
-font-style: normal;
-font-weight: 700;
-font-size: 24px;
-line-height: 104%;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 104%;
   }
 }
 
