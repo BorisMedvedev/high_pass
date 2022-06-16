@@ -1,15 +1,50 @@
+@import "reset";
+@import "vars";
 @import "mixins";
 @import "libs";
-@import "vars";
 @import "fonts";
 @import "global";
-@import "./components/header";
-@import "./components/hero";
-@import "./components/about";
-@import "./components/gallery";
-@import "./components/catalog";
-@import "./components/events";
-@import "./components/project";
-@import "./components/contacts";
-@import "./components/footer";
-@import "./components/modal-popup";
+
+.hero{
+  padding: 80px 0;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns:630px 300px 300px;
+  grid-template-rows: 300px 300px ;
+  gap: 30px 30px;
+
+
+  &__item {
+
+  }
+}
+.hero-content__item1 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.hero-content__item2 {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.hero-content__item3 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+
+
+}
+.hero-content__item4 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+
+
+}
