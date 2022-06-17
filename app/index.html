@@ -5,14 +5,19 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blanchard</title>
+  <title>Студия “High pass”</title>
+
+  <script src="js/inputmask.min.js" defer></script>
+  <script src="js/just-validate.js" defer></script>
+
+  <script src="js/main.min.js " defer></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=76d10f3a-6594-4483-8620-1091358b4d14&lang=ru_RU"></script>
 
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
   <div class="site">
-
     <header id="header" class="header">
       <div class="container">
         <div class="header__inner">
@@ -27,7 +32,6 @@
           </a>
 
           <div class="header__wrapper">
-
             <nav class="nav" title="главное меню">
               <ul class="list-reset nav__list">
                 <li class="nav__item">
@@ -50,68 +54,227 @@
 
             <ul class="social-list list-reset">
               <li class="social-list__item">
-                <a class="social-list__link social-list__link--vk " href="https://vk.com/medvedevbn"
+                <a class="social-list__link social-list__link--vk" href="https://vk.com/medvedevbn"
                   target="_blank"><span class="sr-only"> ссылка на социальную сеть </span></a>
               </li>
               <li class="social-list__item">
-                <a class="social-list__link social-list__link--inst " href="https://vk.com/medvedevbn"
+                <a class="social-list__link social-list__link--inst" href="https://vk.com/medvedevbn"
                   target="_blank"><span class="sr-only"> ссылка на социальную сеть </span></a>
               </li>
               <li class="social-list__item">
-                <a class="social-list__link social-list__link--fb " href="https://vk.com/medvedevbn"
+                <a class="social-list__link social-list__link--fb" href="https://vk.com/medvedevbn"
                   target="_blank"><span class="sr-only"> ссылка на социальную сеть </span></a>
               </li>
             </ul>
-
           </div>
-
         </div>
       </div>
     </header>
 
     <main>
-
       <section class="hero">
-
         <h1 class="sr-only">Художественная Галерея Blanchard</h1>
         <div class="container">
-
-          <div class="hero-content">
-            <div class="hero-content__item hero-content__item1">
-              <img src="./images/hero/hero-1.jpg" alt="">
-            </div>
-            <div class="hero-content__item hero-content__item2">
+          <ul class="hero-content list-reset">
+            <li class="hero-content__item hero-content__item1">
+              <img src="./images/hero/hero-1.jpg" alt="" />
+              <div class="hero-content__item-info">
+                <span class="hero-content__item-text">Мастер-класс от Игоря Робова</span>
+                <h2 class="hero-content__item-title">
+                  Неоновый фотосет 2.0 7 июля 20:00
+                </h2>
+                <a class="hero-content__item-btn btn" href="">Узнать больше</a>
+              </div>
+              <a class="hero-content__item-link badge" href="">#мастеркласс</a>
+            </li>
+            <li class="hero-content__item hero-content__item2">
               <div>Работы участников предыдущего мастер-класса</div>
-            </div>
-            <div class="hero-content__item hero-content__item3">
-              <img src="./images/hero/hero-2.jpg" alt="">
-            </div>
-            <div class="hero-content__item hero-content__item4">
-              <img src="./images/hero/hero-3.jpg" alt="">
-            </div>
-            <div class="hero-content__item hero-content__item5">
-              <img src="./images/hero/hero-4.jpg" alt="">
-            </div>
-
-
-
-          </div>
-
+            </li>
+            <li class="hero-content__item hero-content__item3">
+              <img src="./images/hero/hero-2.jpg" alt="" />
+            </li>
+            <li class="hero-content__item hero-content__item4">
+              <img src="./images/hero/hero-3.jpg" alt="" />
+            </li>
+            <li class="hero-content__item hero-content__item5">
+              <img src="./images/hero/hero-4.jpg" alt="" />
+            </li>
+          </ul>
         </div>
-
       </section>
 
+      <section class="about">
+        <div class="container">
+          <h3 class="about__title title">О студии</h3>
+          <div class="about__inner">
+            <p class="about__inner-text">
+              В рамках спецификации современных стандартов, интерактивные
+              прототипы, инициированные исключительно синтетически, ограничены
+              исключительно образом мышления. Предварительные выводы
+              неутешительны: высокотехнологичная концепция общественного
+              уклада требует от нас анализа соответствующих условий
+              активизации! Следует отметить, что семантический разбор внешних
+              противодействий фиксирует необходимость распределения внутренних
+              резервов и ресурсов. Безусловно, граница обучения кадров
+              предоставляет широкие возможности для первоочередных требований.
+              Повседневная практика показывает, что глубокий уровень
+              погружения предполагает независимые способы реализации новых
+              принципов формирования материально-технической и кадровой базы.
+              Приятно, граждане, наблюдать, как явные признаки
+              институционализации являются только методом политического
+              участия и нарушающими общечеловеческие нормы этики.
+            </p>
+
+            <div class="about__inner-img-form">
+              <img class="about__inner-img" src="./images/about/about-1.jpg" alt="фото" width="630" height="255" />
+              <p class="about__inner-img-form-text">
+                Подписаться на рассылку
+              </p>
+              <form class="form">
+                <label class="form__label">
+                  <input type="text" class="form__input" placeholder="E-mail" />
+                </label>
+                <button class="form__btn btn-reset btn">Отправить</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="project">
+        <div class="container">
+          <h3 class="project__title title">Наши проекты</h3>
+          <div class="project__content">
+            <ul class="project-content list-reset">
+              <li class="project-content__item project-content__item-1">
+                <img class="project-content__item-img" src="./images/project/project-1.jpg" alt="фото" width="190"
+                  height="184" />
+                <p class="project-content__item-text">
+                  Синтетически, смешаны с не уникальными данными до степени Синтетически, смешаны с не уникальными данными до степени
+                </p>
+                <span class="project-content__item-date">16 июня</span>
+                <a class="project-content__item-link badge" href="">#пейзаж</a>
+              </li>
+              <li class="project-content__item project-content__item-2">
+                <img class="project-content__item-img" src="./images/project/project-2.jpg" alt="фото" width="190"
+                  height="184" />
+                <p class="project-content__item-text">
+                  В своём стремлении улучшить опыт мы упускаем, что явные В своём стремлении улучшить опыт мы упускаем, что явные
+                </p>
+                <span class="project-content__item-date">16 июня</span>
+                <a class="project-content__item-link badge" href="">#портрет</a>
+              </li>
+              <li class="project-content__item project-content__item-3">
+                <img class="project-content__item-img" src="./images/project/project-3.jpg" alt="фото" width="190"
+                  height="184" />
+                <p class="project-content__item-text">
+                  Равным образом, высокое качество позиционных Равным образом, высокое качество позиционных
+                </p>
+                <span class="project-content__item-date">16 июня</span>
+                <a class="project-content__item-link badge" href="">#предмет</a>
+              </li>
+              <li class="project-content__item project-content__item-4">
+                <img class="project-content__item-img" src="./images/project/project-4.jpg" alt="фото" width="630"
+                  height="300" />
+                <a class="project-content__item-link badge" href="">#проектзабвение</a>
+
+                <div class="info-block">
+                  <div class="info-block__box">
+                    <span class="info-block__date">16 июня</span>
+                    <h4 class="info-block__title">Забвение</h4>
+                    <p class="info-block__descr">
+                      Играет важную роль в формировании глубокомысленных
+                      рассуждений
+                    </p>
+                  </div>
+                  <button class="info-block__btn btn-reset btn">
+                    О проекте
+                  </button>
+                </div>
+              </li>
+            </ul>
+
+            <ul class="project-content project-content__right list-reset">
+              <li class="project-content__item project-content__item-1--right">
+                <img class="project-content__item-img" src="./images/project/project-5.jpg" alt="фото" width="630"
+                  height="300" />
+
+                <div class="info-block">
+                  <div class="info-block__box">
+                    <span class="info-block__date">9 апреля</span>
+                    <h4 class="info-block__title info-block__title--right">
+                      Cемантический разбор
+                    </h4>
+                    <p class="info-block__descr">
+                      В рамках спецификации современных стандартов,
+                      интерактивные прототипы
+                    </p>
+                  </div>
+                  <button class="info-block__btn btn-reset btn">
+                    О проекте
+                  </button>
+                </div>
+
+                <a class="project-content__item-link badge" href="">#fuji</a>
+              </li>
+              <li class="project-content__item project-content__item-2--right">
+                <img class="project-content__item-img" src="./images/project/project-6.jpg" alt="фото" width="300"
+                  height="184" />
+                <p class="project-content__item-text">
+                  Как принято считать, многие известные личности и по сей день
+                  остаются уделом либералов Как принято считать, многие известные личности и по сей день
+                  остаются уделом либералов
+                </p>
+                <span class="project-content__item-date">9 марта</span>
+                <a class="project-content__item-link badge" href="">#ретушь</a>
+              </li>
+              <li class="project-content__item project-content__item-3--right">
+                <img class="project-content__item-img" src="./images/project/project-7.jpg" alt="фото" width="300"
+                  height="184" />
+                <p class="project-content__item-text">
+                  С учётом сложившейся международной обстановки, новая модель
+                  организационной  С учётом сложившейся международной обстановки, новая модель
+                  организационной
+                </p>
+                <span class="project-content__item-date">1 марта</span>
+                <a class="project-content__item-link badge" href="">#портрет</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="contacts">
+        <div class="container">
+          <h3 class="contacts__title title">Контакты</h3>
+          <div class="contacts__inner">
+            <div class="map" id="contacts-map"></div>
+
+            <div class="contacts__form">
+              <h5 class="contacts__form-title">Оставить заявку</h5>
+              <p class="contacts__form-descr">
+                Оставьте ваши данные, указав в графе “Комментарий” желаемые
+                время и дату съемки или другого мероприятия
+              </p>
+
+              <form class="application-form">
+                <label class="application-form__label">
+                  <input type="text" class="application-form__input" placeholder="Имя" />
+                </label>
+                <label class="application-form__label">
+                  <input type="email" class="application-form__input" placeholder="E-mail" />
+                </label>
+                <textarea class="application-form__textarea" cols="30" rows="10" placeholder="Комментарий"></textarea>
+                <button class="application-form__btn btn-reset btn">
+                  Отправить
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-
   </div>
-
-
-  <script src="js/inputmask.min.js"></script>
-  <script src="js/just-validate.js"></script>
-
-  <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
-  <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
-  <script src="js/main.min.js "></script>
 </body>
 
 </html>

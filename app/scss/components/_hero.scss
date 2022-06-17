@@ -1,0 +1,80 @@
+.hero {
+  padding: 42px 0 24px;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 630px 300px 300px;
+  grid-template-rows: 13px 300px 300px;
+  gap: 30px;
+
+  & img {
+    object-fit: cover;
+  }
+
+  &__item1 {
+    position: relative;
+    grid-column: 1/2;
+    grid-row: 1/4;
+  }
+
+  &__item-info {
+    position: absolute;
+    bottom: 104px;
+    left: 59px;
+  }
+
+  &__item-text {
+    color: $white;
+  }
+
+  &__item-title {
+    max-width: 427px;
+    margin: 0;
+    margin-bottom: 19px;
+    font-family: "TTFirsNeue", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 104%;
+    color: $white;
+  }
+
+  &__item-link {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+
+  &__item2 {
+    grid-column: 2/4;
+    grid-row: 1/2;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 104%;
+
+    & div {
+      margin-top: -5px;
+      font-family: 'TTFirsNeue';
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 104%;
+
+    }
+
+  }
+
+  &__item3 {
+    grid-column: 2/4;
+    grid-row: 2/3;
+  }
+
+  &__item4 {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+
+  &__item5 {
+    grid-column: 3/4;
+    grid-row: 3/4;
+  }
+}

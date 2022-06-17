@@ -1,0 +1,90 @@
+.header {
+  padding: 25px 0;
+  min-height: 80px;
+  background-color: $mineShaft;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.nav {
+  font-family: "TTFirsNeue", sans-serif;
+
+  &__list {
+    margin-right: 87px;
+    align-items: center;
+    display: flex;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 80px;
+    }
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: $white;
+  }
+}
+
+.social-list {
+  display: flex;
+  align-items: center;
+
+  &__item {
+    width: 30px;
+    height: 30px;
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    transition: filter 0.2s;
+
+    &:focus {
+      outline: 0;
+      filter: invert(5%) sepia(100%) saturate(19%) hue-rotate(261deg)
+        brightness(104%) contrast(104%);
+    }
+
+    &:hover {
+      filter: invert(5%) sepia(100%) saturate(19%) hue-rotate(261deg)
+        brightness(104%) contrast(104%);
+    }
+
+    &:active {
+      filter: invert(50%) sepia(16%) saturate(3635%) hue-rotate(233deg)
+        brightness(84%) contrast(93%);
+    }
+
+    &--vk {
+      background-image: url("../../images/icons/vk.svg");
+    }
+
+    &--inst {
+      background-image: url("../../images/icons/inst.svg");
+    }
+
+    &--fb {
+      background-image: url("../../images/icons/fb.svg");
+    }
+  }
+}

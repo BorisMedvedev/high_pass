@@ -1,0 +1,80 @@
+.about {
+  background-color: $mineShaft;
+  padding: 30px 0 70px;
+
+  &__title {
+    color: $white;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__inner-img-form {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    max-width: 630px;
+    width: 100%;
+  }
+
+  &__inner-text {
+    max-width: 630px;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: $silver;
+  }
+
+  &__inner-img {
+    margin-bottom: 22px;
+
+  }
+
+  &__inner-img-form-text {
+    margin: 0;
+    margin-bottom: 16px;
+    font-family: 'TTFirsNeue', sans-serif;
+    font-size: 24px;
+    line-height: 22px;
+    color: $white;
+  }
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__label {
+    max-width: 474px;
+    width: 100%;
+
+  }
+
+  &__input {
+    padding: 16px 23px;
+    border: none;
+    outline: 0;
+    width: 100%;
+    min-height: 50px;
+    background-color: $tundora;
+    color: $silver;
+    font-size: 16px;
+
+    &::placeholder {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      color: $silver;
+    }
+  }
+
+  &__btn{
+    min-height: 50px;
+  }
+}
