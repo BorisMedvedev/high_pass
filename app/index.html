@@ -22,17 +22,17 @@
     <header id="header" class="header">
   <div class="container">
     <div class="header__inner">
-      <!-- <div class="burger">
-    <span class="burger__line"></span>
-    <span class="burger__line"></span>
-    <span class="burger__line"></span>
-  </div> -->
+
       <a class="logo" href="#">
         <img class="logo__img" loading="lazy" src="./images/icons/logo.svg" alt="логотип blanchard" width="190"
           height="30" />
       </a>
 
       <div class="header__wrapper">
+        <button class="burger btn-reset" type="button">
+          <span class="burger__line"></span>
+          <span class="sr-only">Открыть меню</span>
+         </button>
         <nav class="nav" title="главное меню">
           <ul class="list-reset nav__list">
             <li class="nav__item">
@@ -55,20 +55,22 @@
 
         <ul class="social-list list-reset">
           <li class="social-list__item">
-            <a class="social-list__link social-list__link--vk" href="https://vk.com/medvedevbn"
-              target="_blank"><span class="sr-only"> ссылка на социальную сеть </span></a>
+            <a class="social-list__link social-list__link--vk" href="https://vk.com/medvedevbn" target="_blank"><span
+                class="sr-only"> ссылка на социальную сеть </span></a>
           </li>
           <li class="social-list__item">
-            <a class="social-list__link social-list__link--inst" href="https://vk.com/medvedevbn"
-              target="_blank"><span class="sr-only"> ссылка на социальную сеть </span></a>
+            <a class="social-list__link social-list__link--inst" href="https://vk.com/medvedevbn" target="_blank"><span
+                class="sr-only"> ссылка на социальную сеть </span></a>
           </li>
           <li class="social-list__item">
-            <a class="social-list__link social-list__link--fb" href="https://vk.com/medvedevbn"
-              target="_blank"><span class="sr-only"> ссылка на социальную сеть </span></a>
+            <a class="social-list__link social-list__link--fb" href="https://vk.com/medvedevbn" target="_blank"><span
+                class="sr-only"> ссылка на социальную сеть </span></a>
           </li>
         </ul>
 
+
       </div>
+      <button class="search-btn btn-reset"></button>
     </div>
   </div>
 </header>
@@ -79,7 +81,11 @@
   <div class="container">
     <ul class="hero-content list-reset">
       <li class="hero-content__item hero-content__item1">
-        <img src="./images/hero/hero-1.jpg" alt="" />
+        <picture>
+          <source srcset="images/hero/768/hero-1.jpg" media="(max-width: 768px)">
+          <source srcset="images/hero/1024/hero-1.jpg" media="(max-width: 1024px)" width="466" height="623">
+          <img src="images/hero/hero-1.jpg" alt="фото" />
+        </picture>
         <div class="hero-content__item-info">
           <span class="hero-content__item-text">Мастер-класс от Игоря Робова</span>
           <h2 class="hero-content__item-title">
@@ -93,19 +99,31 @@
         <div>Работы участников предыдущего мастер-класса</div>
       </li>
       <li class="hero-content__item hero-content__item3">
-        <img src="./images/hero/hero-2.jpg" alt="" />
+        <picture>
+          <source srcset="images/hero/768/hero-2.jpg" media="(max-width: 768px)" >
+          <source srcset="images/hero/1024/hero-2.jpg" media="(max-width: 1024px)" width="466" height="332">
+          <img src="images/hero/hero-2.jpg" alt="фото" />
+        </picture>
       </li>
       <li class="hero-content__item hero-content__item4">
-        <img src="./images/hero/hero-3.jpg" alt="" />
+        <picture>
+          <source srcset="images/hero/768/hero-3.jpg" media="(max-width: 768px)">
+          <source srcset="images/hero/1024/hero-3.jpg" media="(max-width: 1024px)" width="218" height="186">
+          <img src="images/hero/hero-3.jpg" alt="фото" />
+        </picture>
       </li>
       <li class="hero-content__item hero-content__item5">
-        <img src="./images/hero/hero-4.jpg" alt="" />
+        <picture>
+          <source srcset="images/hero/768/hero-4.jpg" media="(max-width: 768px)">
+          <source srcset="images/hero/1024/hero-4.jpg" media="(max-width: 1024px)" width="218" height="186">
+          <img src="images/hero/hero-4.jpg" alt="фото" />
+        </picture>
       </li>
     </ul>
   </div>
 </section>
 
-      <section class="about">
+       <section class="about">
   <div class="container">
     <h3 class="about__title title">О студии</h3>
     <div class="about__inner">
@@ -128,7 +146,12 @@
       </p>
 
       <div class="about__inner-img-form">
-        <img class="about__inner-img" src="./images/about/about-1.jpg" alt="фото" width="630" height="255" />
+        <picture>
+          <source srcset="images/about/about-4.jpg" media="(max-width: 680px)">
+          <source srcset="images/about/about-3.jpg" media="(max-width: 768px)">
+          <source srcset="images/about/about-2.jpg" media="(max-width: 1340px)">
+          <img class="about__inner-img" src="images/about/about-1.jpg" alt="Книжная гравюра">
+        </picture>
         <p class="about__inner-img-form-text">
           Подписаться на рассылку
         </p>
@@ -250,7 +273,18 @@
   <div class="container">
     <h3 class="contacts__title title">Контакты</h3>
     <div class="contacts__inner">
-      <div class="map" id="contacts-map"></div>
+
+      <div class="map" id="contacts-map">
+
+        <div class="map__info">
+          <button class="btn-close btn-reset"></button>
+          <h2 class="map__title">Студия “High pass”</h2>
+          <address class="map__address">107045, Москва, Даев переулок, дом 41, бизнес-центр «Даев Плаза», этаж 8, офис №
+            82 </address>
+          <a class="map__phone" href="tel:+749542423532">+7 (495) 42-423-532</a>
+        </div>
+
+      </div>
 
       <div class="contacts__form">
         <h5 class="contacts__form-title">Оставить заявку</h5>
@@ -282,10 +316,13 @@
 
     <div class="footer__inner">
 
+     <div class="logo-box">
       <a class="logo footer__logo" href="#">
         <img class="logo__img" loading="lazy" src="./images/icons/logo.svg" alt="логотип blanchard" width="190"
           height="30" />
       </a>
+      <span>Фотостудия High pass® 2018-2022</span>
+     </div>
 
       <div class="footer__info">
         <p>Которая из моих фотографий самая любимая? Та, которую я собираюсь снять завтра.
@@ -296,15 +333,15 @@
         <span class="footer__social-text">Больше интересного:</span>
         <ul class="social-list footer__social list-reset">
           <li class="social-list__item">
-            <a class="social-list__link social-list__link--vk" href="https://vk.com/medvedevbn" target="_blank"><span
-                class="sr-only"> ссылка на социальную сеть </span></a>
-          </li>
-          <li class="social-list__item">
             <a class="social-list__link social-list__link--inst" href="https://vk.com/medvedevbn" target="_blank"><span
                 class="sr-only"> ссылка на социальную сеть </span></a>
           </li>
           <li class="social-list__item">
             <a class="social-list__link social-list__link--fb" href="https://vk.com/medvedevbn" target="_blank"><span
+                class="sr-only"> ссылка на социальную сеть </span></a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link social-list__link--vk" href="https://vk.com/medvedevbn" target="_blank"><span
                 class="sr-only"> ссылка на социальную сеть </span></a>
           </li>
         </ul>

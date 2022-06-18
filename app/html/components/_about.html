@@ -21,7 +21,12 @@
       </p>
 
       <div class="about__inner-img-form">
-        <img class="about__inner-img" src="./images/about/about-1.jpg" alt="фото" width="630" height="255" />
+        <picture>
+          <source srcset="images/about/about-4.jpg" media="(max-width: 680px)">
+          <source srcset="images/about/about-3.jpg" media="(max-width: 768px)">
+          <source srcset="images/about/about-2.jpg" media="(max-width: 1340px)">
+          <img class="about__inner-img" src="images/about/about-1.jpg" alt="Книжная гравюра">
+        </picture>
         <p class="about__inner-img-form-text">
           Подписаться на рассылку
         </p>

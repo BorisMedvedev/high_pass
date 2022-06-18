@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-function contactsMap() {
+  function contactsMap() {
     ymaps.ready(init);
 
     function init() {
@@ -23,4 +23,20 @@ function contactsMap() {
     }
   }
   contactsMap();
+
+
+  const mapInfo = document.querySelector('.map__info');
+  const closeBtn = document.querySelector('.btn-close');
+  closeBtn.addEventListener("click", () => {
+    mapInfo.classList.add('map__info--no-active');
+  });
+
+
+
+});
+
+const burger = document.querySelector('.burger');
+
+burger.addEventListener('click', () => {
+  burger.classList.toggle('burger--active');
 });

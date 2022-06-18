@@ -9,14 +9,20 @@
   &__inner {
     display: flex;
     justify-content: space-between;
+    @include r(680) {
+      flex-wrap: wrap;
+    }
   }
 
   &__inner-img-form {
     display: flex;
     flex-direction: column;
-    justify-content:space-between;
+    justify-content: space-between;
     max-width: 630px;
     width: 100%;
+    @include r(1100) {
+      max-width: 466px;
+    }
   }
 
   &__inner-text {
@@ -27,20 +33,31 @@
     font-size: 16px;
     line-height: 28px;
     color: $silver;
+    @include r(1200) {
+      max-width: 466px;
+    }
+    @include r(768) {
+      max-width: 342px;
+    }
+    @include r(440) {
+      font-size: 14px;
+    }
   }
 
   &__inner-img {
     margin-bottom: 22px;
-
   }
 
   &__inner-img-form-text {
     margin: 0;
     margin-bottom: 16px;
-    font-family: 'TTFirsNeue', sans-serif;
+    font-family: "TTFirsNeue", sans-serif;
     font-size: 24px;
     line-height: 22px;
     color: $white;
+    @include r(440) {
+      font-size: 18px;
+    }
   }
 }
 
@@ -48,11 +65,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   &__label {
     max-width: 474px;
     width: 100%;
-
   }
 
   &__input {
@@ -64,9 +81,13 @@
     background-color: $tundora;
     color: $silver;
     font-size: 16px;
+    @include r(1100) {
+      margin-bottom: 20px;
+      max-width: 342px;
+    }
 
     &::placeholder {
-      font-family: 'Roboto';
+      font-family: "Roboto";
       font-style: normal;
       font-weight: 400;
       font-size: 16px;
@@ -74,7 +95,7 @@
     }
   }
 
-  &__btn{
+  &__btn {
     min-height: 50px;
   }
 }
