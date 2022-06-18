@@ -13,8 +13,8 @@ function contactsMap() {
         {},
         {
           iconLayout: "default#image",
-          iconImageHref: "../images/icons/logo.svg",
-          iconImageSize: [50, 50],
+          iconImageHref: "../images/icons/ellipse.svg",
+          iconImageSize: [12, 12],
           iconImageOffset: [-3, -42],
         }
       );
