@@ -77,10 +77,14 @@
     border: none;
     outline: 0;
     width: 100%;
-    min-height: 50px;
+    height: 50px;
     background-color: $tundora;
-    color: $silver;
+    color: $white;
     font-size: 16px;
+    border: 1px solid transparent;
+    &:focus{
+      border: 1px solid #FF6E30;
+    }
     @include r(1100) {
       margin-bottom: 20px;
       max-width: 342px;
@@ -93,9 +97,13 @@
       font-size: 16px;
       color: $silver;
     }
+    &:hover::placeholder{
+      color: #FF6E30;
+    }
   }
 
   &__btn {
-    min-height: 50px;
+    line-height: 16px;
+    height: 50px;
   }
 }

@@ -64,9 +64,9 @@ img {
   font-weight: 700;
   font-size: 24px;
   line-height: 31px;
-  @include r(440){
-   font-size: 18px;
-   }
+  @include r(440) {
+    font-size: 18px;
+  }
 }
 
 .link-kit {
@@ -84,7 +84,7 @@ img {
     left: -6px;
     right: -6px;
     bottom: -3px;
-    background-color: rgb(250, 48, 48);
+    background-color: #bc572b;
     color: $white;
     z-index: -1;
     transition: color 0.2s, filter 0.2s;
@@ -100,22 +100,12 @@ img {
   }
 
   &:hover {
-    color: $mineShaft;
-  }
-
-  &:hover::before {
-    filter: invert(19%) sepia(30%) saturate(7421%) hue-rotate(217deg)
-      brightness(92%) contrast(107%);
+    color: #ff6e30;
   }
 
   &:active {
     outline: 0;
-    color: $mineShaft;
-  }
-
-  &:active::before {
-    filter: invert(69%) sepia(18%) saturate(2784%) hue-rotate(236deg)
-      brightness(98%) contrast(91%);
+    color: #ce4307;
   }
 
   &:active::after {
@@ -145,9 +135,37 @@ img {
   line-height: 19px;
   color: $white;
   background-color: $orange;
+  border: 3px solid transparent;
+  transition: background-color 0.3s;
+
+  &:focus {
+    background-color: #ff6e30;
+    border: 3px solid #ce4307;
+  }
+  &:hover {
+    background-color: #bc572b;
+  }
+
+  &:active {
+    border: 3px solid transparent;
+    background-color: #ce4307;
+  }
 }
 
+.btn-transparent {
+  &:focus {
+    background-color: #bc572b;
+    border: 3px solid #ff6e30;
+  }
+  &:hover {
+    background-color: #ff6e30;
+  }
 
+  &:active {
+    border: 3px solid transparent;
+    background-color: #ce4307;
+  }
+}
 
 input[type="text"]::-webkit-input-placeholder,
 input[type="email"]::-webkit-input-placeholder {

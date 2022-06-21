@@ -79,6 +79,7 @@
     font-size: 16px;
     line-height: 21px;
     color: $white;
+    transition: color 0.3s;
   }
 }
 
@@ -103,32 +104,41 @@
     height: 30px;
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: contain;
-    transition: filter 0.2s;
+    background-size: cover;
+    filter: invert(89%) sepia(0%) saturate(61%) hue-rotate(232deg) brightness(90%) contrast(98%);
+
+
+    transition: filter 0.3s;
 
     &:focus {
-      outline: 0;
-      filter: invert(5%) sepia(100%) saturate(19%) hue-rotate(261deg) brightness(104%) contrast(104%);
+      filter: invert(59%) sepia(8%) saturate(7192%) hue-rotate(342deg) brightness(91%) contrast(83%);
+
+
     }
 
     &:hover {
-      filter: invert(5%) sepia(100%) saturate(19%) hue-rotate(261deg) brightness(104%) contrast(104%);
+      filter: invert(30%) sepia(100%) saturate(4066%) hue-rotate(339deg) brightness(101%) contrast(101%);
     }
 
     &:active {
-      filter: invert(50%) sepia(16%) saturate(3635%) hue-rotate(233deg) brightness(84%) contrast(93%);
+      filter: invert(71%) sepia(35%) saturate(4429%) hue-rotate(4deg) brightness(92%) contrast(95%);
+
+
     }
 
     &--vk {
-      background-image: url("../images/icons/vk.svg");
+      background-image: url("../images/sprite.svg#vk");
+       transition: filter 0.3s;
     }
 
     &--inst {
-      background-image: url("../images/icons/inst.svg");
+      background-image: url("../images/sprite.svg#inst");
+       transition: filter 0.3s;
     }
 
     &--fb {
-      background-image: url("../images/icons/fb.svg");
+      background-image: url("../images/sprite.svg#fb");
+       transition: filter 0.3s;
     }
   }
 }
