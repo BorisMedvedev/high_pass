@@ -22,7 +22,7 @@
 
 .logo{
   &__img{
-    @include r(768){
+    @include r(1024){
       width: 166px;
     }
     @include r(320){
@@ -46,7 +46,7 @@
     min-height: 45px;
   }
   @include r(320) {
-    top: 69px;
+    top: 70px;
   }
 
   &__list {
@@ -55,6 +55,9 @@
     display: flex;
     @include r(1200) {
       margin-right: 30px;
+    }
+    @include r(1024) {
+      margin-right: 50px;
     }
     @include r(968) {
       margin-right: 0;
@@ -69,7 +72,7 @@
     &:not(:last-child) {
       margin-right: 80px;
       @include r(1200) {
-        margin-right: 30px;
+        margin-right: 33px;
       }
     }
   }
@@ -174,7 +177,8 @@
     display: block;
   }
   @include r(320) {
-    top: 82px;
+    top: 84px;
+    left: 19px;
   }
 }
 

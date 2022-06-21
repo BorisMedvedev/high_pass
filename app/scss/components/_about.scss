@@ -1,9 +1,18 @@
 .about {
   background-color: $mineShaft;
   padding: 30px 0 70px;
+  @include r(1024) {
+    padding: 30px 0 81px;
+  }
+  @include r(768) {
+    padding: 30px 0 62px;
+  }
 
   &__title {
     color: $white;
+    @include r(320) {
+      margin-bottom: 1px;
+    }
   }
 
   &__inner {
@@ -19,9 +28,9 @@
     flex-direction: column;
     justify-content: space-between;
     max-width: 630px;
-    width: 100%;
+
     @include r(1100) {
-      max-width: 466px;
+      max-width: 338px;
     }
   }
 
@@ -40,6 +49,8 @@
       max-width: 342px;
     }
     @include r(440) {
+      margin-bottom: 21px;
+      line-height: 25px;
       font-size: 14px;
     }
   }
@@ -89,6 +100,9 @@
       margin-bottom: 20px;
       max-width: 342px;
     }
+    @include r(320) {
+      height: 40px;
+    }
 
     &::placeholder {
       font-family: "Roboto";
@@ -105,5 +119,13 @@
   &__btn {
     line-height: 16px;
     height: 50px;
+    @include r(320) {
+      line-height: 7px;
+  height: 40px;
+  font-size: 14px;
+  padding: 15px 18px;
+    }
   }
 }
+
+

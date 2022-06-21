@@ -1,7 +1,14 @@
 .hero {
   padding: 42px 0 67px;
+  @include r(1024) {
+    padding: 42px 0 60px;
+  }
   @include r(968) {
-    padding-top: 80px;
+    padding-top: 90px;
+  }
+  @include r(320) {
+    padding-top: 76px;
+    padding-bottom: 46px;
   }
 }
 
@@ -35,7 +42,7 @@
     left: 59px;
     @include r(1024) {
       left: 30px;
-      bottom: 74px;
+      bottom: 38px;
     }
     @include r(768) {
       left: 30px;
@@ -48,6 +55,7 @@
     margin-bottom: 3px;
     color: $white;
     @include r(440) {
+      margin-bottom: 9px;
       font-size: 14px;
     }
   }
@@ -62,15 +70,20 @@
     line-height: 104%;
     color: $white;
     @include r(1024) {
+      line-height: 95%;
       font-size: 34px;
     }
     @include r(440) {
+      margin-bottom: 13px;
+      max-width: 169px;
       font-size: 24px;
+      line-height: 110%;
     }
   }
 
   &__item-btn {
     @include r(440) {
+      padding: 9px 19px;
       font-size: 14px;
     }
   }
@@ -79,6 +92,10 @@
     position: absolute;
     top: 15px;
     right: 15px;
+    @include r(320) {
+      top: 7px;
+      right: 7px;
+    }
   }
 
   &__item2 {
@@ -104,6 +121,7 @@
     }
     @include r(440) {
       font-size: 18px;
+      transform: translateY(2px);
     }
   }
 
