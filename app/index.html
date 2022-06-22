@@ -7,13 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Студия “High pass”</title>
 
-  <script src="js/inputmask.min.js" defer></script>
-  <script src="js/just-validate.js" defer></script>
-
-  <script src="js/main.min.js " defer></script>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=76d10f3a-6594-4483-8620-1091358b4d14&lang=ru_RU"></script>
 
-  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js" defer></script>
+  <script src="js/inputmask.min.js" defer></script>
+  <script src="js/just-validate.js" defer></script>
+  <script src="js/main.min.js " defer></script>
+
+
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
@@ -322,13 +322,14 @@
           время и дату съемки или другого мероприятия
         </p>
 
-        <form class="application-form">
+        <form id="form" class="application-form contacts-form">
           <label class="application-form__label">
-            <input type="text" class="application-form__input" placeholder="Имя" />
+            <input id="name" name="name" type="text" class="application-form__input" placeholder="Имя" data-validate-field="name" required/>
           </label>
           <label class="application-form__label">
-            <input type="email" class="application-form__input" placeholder="E-mail" />
+            <input id="emael" name="email" type="email" class="application-form__input" placeholder="E-mail" data-validate-field="mail" required/>
           </label>
+
           <textarea class="application-form__textarea" cols="30" rows="10" placeholder="Комментарий"></textarea>
           <button class="application-form__btn btn-reset btn">
             Отправить

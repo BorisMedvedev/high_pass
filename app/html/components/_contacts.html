@@ -22,13 +22,14 @@
           время и дату съемки или другого мероприятия
         </p>
 
-        <form class="application-form">
+        <form id="form" class="application-form contacts-form">
           <label class="application-form__label">
-            <input type="text" class="application-form__input" placeholder="Имя" />
+            <input id="name" name="name" type="text" class="application-form__input" placeholder="Имя" data-validate-field="name" required/>
           </label>
           <label class="application-form__label">
-            <input type="email" class="application-form__input" placeholder="E-mail" />
+            <input id="emael" name="email" type="email" class="application-form__input" placeholder="E-mail" data-validate-field="mail" required/>
           </label>
+
           <textarea class="application-form__textarea" cols="30" rows="10" placeholder="Комментарий"></textarea>
           <button class="application-form__btn btn-reset btn">
             Отправить
