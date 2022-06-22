@@ -42,5 +42,3 @@ burger.addEventListener('click', () => {
 });
 
 
-
-  
