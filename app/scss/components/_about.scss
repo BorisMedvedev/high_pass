@@ -29,8 +29,11 @@
     justify-content: space-between;
     max-width: 630px;
 
-    @include r(1100) {
-      max-width: 338px;
+    @include r(1024) {
+      max-width: 467px;
+    }
+    @include r(768) {
+      max-width: 342px;
     }
   }
 

@@ -1,6 +1,19 @@
 .contacts {
   padding-bottom: 70px;
 
+  &__container {
+    @include r(320) {
+      max-width: 100%;
+      padding: 0;
+    }
+  }
+  @include r(1024) {
+    padding: 11px 0 70px;
+  }
+  @include r(440) {
+    padding: 11px 0 50px;
+  }
+
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -9,6 +22,10 @@
 
   &__title {
     margin-bottom: 16px;
+    @include r(440) {
+      padding-left: 20px;
+      margin-bottom: 5px;
+    }
   }
 
   &__form {
@@ -27,10 +44,12 @@
     margin: 0;
     margin-bottom: 5px;
     font-size: 24px;
+    font-family: "TTFirsNeue", sans-serif;
+    font-weight: 400;
     line-height: 22px;
     color: $mineShaft;
     @include r(570) {
-     font-size: 18px;
+      font-size: 18px;
     }
   }
 
@@ -40,6 +59,10 @@
     font-size: 16px;
     line-height: 22px;
     color: $dustygray;
+    @include r(440) {
+      font-size: 14px;
+      line-height: 19px;
+    }
   }
 }
 
@@ -51,7 +74,6 @@
   @include r(960) {
     max-width: 466px;
   }
-
 
   &__label {
     width: 100%;
@@ -66,8 +88,14 @@
     color: $mineShaft;
     outline: 0;
     border: 1px solid transparent;
-    &:focus{
-      border: 1px solid #FF6E30;
+    @include r(1024) {
+      padding: 17px 23px;
+    }
+    @include r(440) {
+      padding: 12px 23px;
+    }
+    &:focus {
+      border: 1px solid #ff6e30;
     }
 
     &::placeholder {
@@ -78,10 +106,13 @@
       line-height: 19px;
       color: $dustygray;
       transition: color 0.3s;
+      @include r(440) {
+        font-size: 14px;
+      }
     }
 
-    &:hover::placeholder{
-      color: #FF6E30;
+    &:hover::placeholder {
+      color: #ff6e30;
     }
   }
 
@@ -95,8 +126,11 @@
     outline: 0;
     resize: none;
     border: 1px solid transparent;
-    &:focus{
-      border: 1px solid #FF6E30;
+    @include r(440) {
+      margin-bottom: 23px;
+    }
+    &:focus {
+      border: 1px solid #ff6e30;
     }
 
     &::placeholder {
@@ -107,15 +141,24 @@
       line-height: 19px;
       color: $dustygray;
       transition: color 0.3s;
+      @include r(440) {
+        font-size: 14px;
+      }
     }
 
-    &:hover::placeholder{
-      color: #FF6E30;
+    &:hover::placeholder {
+      color: #ff6e30;
     }
   }
 
   &__btn {
     max-width: 126px;
+    @include r(440) {
+      padding: 10px 22px;
+      max-width: 115px;
+      font-size: 14px;
+      line-height: 16px;
+    }
   }
 }
 
@@ -126,9 +169,16 @@
   @include r(1340) {
     max-width: 590px;
   }
-  @include r(960) {
-    margin-bottom: 24px;
+  @include r(1024) {
+    padding-top: 6px;
+  }
+  @include r(768) {
+    margin-bottom: 30px;
     max-width: 100%;
+  }
+  @include r(440) {
+    margin-bottom: 41px;
+    width: 100%;
   }
 }
 
@@ -161,8 +211,14 @@
       bottom: 0;
       height: 157px;
     }
+    @include r(1024) {
+      bottom: -8px;
+    }
     @include r(670) {
       padding: 25px 20px 14px 18px;
+    }
+    @include r(440) {
+      bottom: -18px;
     }
   }
 
@@ -181,6 +237,9 @@
     line-height: 22px;
     @include r(670) {
       font-size: 18px;
+    }
+    @include r(440) {
+      margin-bottom: 13px;
     }
   }
 
@@ -202,6 +261,9 @@
       font-size: 14px;
       line-height: 18px;
     }
+    @include r(440) {
+      margin-bottom: 13px;
+    }
   }
 
   &__phone {
@@ -218,6 +280,9 @@
     }
     @include r(670) {
       font-size: 18px;
+    }
+    @include r(440) {
+      font-size: 14px;
     }
     &::before {
       position: absolute;
@@ -261,6 +326,3 @@ ymaps.ymaps-2-1-79-map-copyrights-promo {
 ymaps.ymaps-2-1-79-copyright.ymaps-2-1-79-copyright_logo_no {
   display: none;
 }
-
-
-
