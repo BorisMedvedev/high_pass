@@ -42,6 +42,7 @@ burger.addEventListener('click', () => {
 });
 
 
+<<<<<<< HEAD
 
 const anchors = document.querySelectorAll('.nav__link, .footer__logo');
 
@@ -59,3 +60,5 @@ for (let anchor of anchors) {
         });
     });
 }
+=======
+>>>>>>> 08eebf1bc7a6d3db4b212c39df0fbb00c7e3d1a7
