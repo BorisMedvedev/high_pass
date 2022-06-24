@@ -42,7 +42,7 @@ burger.addEventListener('click', () => {
 });
 
 
-<<<<<<< HEAD
+
 
 const anchors = document.querySelectorAll('.nav__link, .footer__logo');
 
@@ -60,5 +60,28 @@ for (let anchor of anchors) {
         });
     });
 }
-=======
->>>>>>> 08eebf1bc7a6d3db4b212c39df0fbb00c7e3d1a7
+
+
+const validate = new window.JustValidate('#form');
+
+validation
+  .addField('#name', [
+    {
+      rule: 'minLength',
+      value: 3,
+    },
+    {
+      rule: 'maxLength',
+      value: 30,
+    },
+  ])
+  .addField('#email', [
+    {
+      rule: 'required',
+      errorMessage: 'Email is required',
+    },
+    {
+      rule: 'email',
+      errorMessage: 'Email is invalid!',
+    },
+  ]);

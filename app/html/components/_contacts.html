@@ -23,12 +23,13 @@
           время и дату съемки или другого мероприятия
         </p>
 
-        <form class="application-form">
+        <form id="form" class="application-form" action="">
+
           <label class="application-form__label">
-            <input id="name" name="name" type="text" class="application-form__input" placeholder="Имя" data-validate-field="name" required/>
+            <input id="name" name="name" type="text" class="application-form__input" placeholder="Имя" data-validate-field="name" required />
           </label>
           <label class="application-form__label">
-            <input id="emael" name="email" type="email" class="application-form__input" placeholder="E-mail" data-validate-field="mail" required/>
+            <input id="email" name="email" type="email" class="application-form__input" placeholder="E-mail" data-validate-field="mail" required />
           </label>
 
           <textarea class="application-form__textarea" cols="30" rows="10" placeholder="Комментарий"></textarea>
@@ -36,10 +37,7 @@
             Отправить
           </button>
         </form>
-
       </div>
-    
-
     </div>
   </div>
 </section>
