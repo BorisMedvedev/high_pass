@@ -52,6 +52,7 @@
 
   &__item-text {
     display: block;
+    margin: 0;
     margin-bottom: 3px;
     color: $white;
     @include r(1024) {
@@ -125,6 +126,7 @@
     }
   }
   &__item-descr {
+    margin: 0;
     margin-bottom: 18px;
     font-family: "TTFirsNeue", sans-serif;
     font-weight: 700;

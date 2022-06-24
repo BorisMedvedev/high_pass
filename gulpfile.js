@@ -107,7 +107,7 @@ function styles() {
 function build() {
   return src(
     [
-      "app/**/*.html",
+      "app/*.html",
       "app/css/style.css",
       "app/fonts/**/*",
       "app/images/**/*",
@@ -147,5 +147,7 @@ exports.default = parallel(
   scripts,
   browsersync,
   imgToApp,
+  cleanDist,
+  build,
   watching
 );
